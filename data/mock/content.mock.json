@@ -1,0 +1,831 @@
+{
+  "updatedAt": "2026-11-24T12:00:00.000Z",
+  "socialLinks": [
+    {
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/nicolas-selicki-web-fullstack/",
+      "icon": "linkedin"
+    },
+    {
+      "label": "GitHub",
+      "href": "https://github.com/nico-slk/",
+      "icon": "github"
+    },
+    {
+      "label": "WhatsApp",
+      "href": "https://wa.me/5492255526270/",
+      "icon": "whatsapp"
+    },
+    {
+      "label": "Email",
+      "href": "mailto:nicolas.selicki@gmail.com",
+      "icon": "mail"
+    }
+  ],
+  "locales": {
+    "es": {
+      "profile": {
+        "fullName": "Nicolás Selicki",
+        "role": "Full Stack Developer Semi-Senior",
+        "headline": "Desarrollo backend y APIs REST escalables, hoy en la plataforma de pagos de AGEA (Grupo Clarín).",
+        "about": "Desarrollador Full Stack Semi-Senior especializado en desarrollo backend y construcción de APIs REST escalables. Experiencia con Node.js, Java (Spring Boot) y arquitecturas basadas en microservicios. Fuerte enfoque en performance, optimización de consultas y reducción de latencia en sistemas de alto tráfico. Experiencia en frontend con React, Angular y TypeScript. Trabajo bajo metodologías ágiles (Scrum) con foco en calidad de código, testing y mejora continua.",
+        "stack": [
+          "JavaScript",
+          "TypeScript",
+          "Java",
+          "React",
+          "Next.js",
+          "Angular",
+          "Node.js",
+          "Express",
+          "Spring Boot",
+          "MySQL",
+          "PostgreSQL",
+          "MongoDB",
+          "Docker",
+          "Google Cloud"
+        ],
+        "location": "Buenos Aires, Argentina",
+        "email": "nicolas.selicki@gmail.com",
+        "avatarUrl": "/mock/avatar.svg",
+        "cvUrl": "/cv/Nicolas_Selicki_CV_es.pdf"
+      },
+      "projects": [
+        {
+          "id": "proj-saver",
+          "technologies": [
+            {
+              "name": "Java",
+              "icon": "java"
+            },
+            {
+              "name": "Spring Boot",
+              "icon": "springboot"
+            },
+            {
+              "name": "Spring Security",
+              "icon": "springsecurity"
+            },
+            {
+              "name": "PostgreSQL",
+              "icon": "postgresql"
+            },
+            {
+              "name": "Flyway",
+              "icon": "flyway"
+            },
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "Vite",
+              "icon": "vite"
+            },
+            {
+              "name": "Tailwind CSS",
+              "icon": "tailwindcss"
+            },
+            {
+              "name": "Zustand",
+              "icon": "zustand"
+            },
+            {
+              "name": "Docker",
+              "icon": "docker"
+            }
+          ],
+          "screenshots": [
+            "/mock/saver.svg"
+          ],
+          "githubUrl": "https://github.com/nico-slk/saver-app",
+          "featured": true,
+          "name": "Saver",
+          "shortDescription": "App web de finanzas personales: ingresos, gastos, ahorro y proyecciones con inflación.",
+          "fullDescription": "Aplicación web responsive para ordenar las finanzas personales en un solo lugar.\n\n• Ingresos fijos y extras; gastos únicos, en cuotas y fijos mensuales con aumentos estimados.\n• Cuentas y patrimonio en pesos y dólares, pagos con comprobantes y cotización del dólar por movimiento.\n• Historial y comparación entre meses, y proyecciones a 6–60 meses en valores de hoy usando la inflación oficial (INDEC / IPC de EE.UU.) descargada automáticamente.\n• Registro con email o Google, recuperación de contraseña por email, español/inglés y tema claro/oscuro.\n\nBackend: API REST con Java 21, Spring Boot 3.5, Spring Security (OAuth2 resource server), PostgreSQL y Flyway, almacenamiento S3 compatible y documentación OpenAPI. Frontend: SPA con React 19, TypeScript, Vite, Tailwind CSS, Zustand, TanStack Query y Recharts.",
+          "order": 1
+        },
+        {
+          "id": "proj-ai-medical",
+          "name": "AI Medical Assistant",
+          "shortDescription": "Chatbot con IA para la gestión de turnos médicos.",
+          "fullDescription": "Asistente conversacional que usa APIs de IA para ayudar a los pacientes a gestionar turnos, integrado con servicios de Google.",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "Node.js",
+              "icon": "nodejs"
+            },
+            {
+              "name": "APIs IA",
+              "icon": "apisia"
+            },
+            {
+              "name": "Google API",
+              "icon": "googleapi"
+            }
+          ],
+          "screenshots": [
+            "/mock/ai-assistant.svg"
+          ],
+          "githubUrl": "https://github.com/nico-slk/",
+          "featured": true,
+          "order": 2
+        },
+        {
+          "id": "proj-consultancy",
+          "name": "Consultancy Web Apps",
+          "shortDescription": "Aplicaciones web para consultoras, con despliegue continuo.",
+          "fullDescription": "Sitios y aplicaciones web construidos con Next.js y TypeScript, con pipelines de CI/CD y despliegue en Vercel.",
+          "technologies": [
+            {
+              "name": "Next.js",
+              "icon": "nextjs"
+            },
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "CI/CD",
+              "icon": "cicd"
+            },
+            {
+              "name": "Vercel",
+              "icon": "vercel"
+            }
+          ],
+          "screenshots": [
+            "/mock/consultancy.svg"
+          ],
+          "githubUrl": "https://github.com/nico-slk/",
+          "featured": true,
+          "order": 3
+        },
+        {
+          "id": "proj-portfolio",
+          "name": "Personal Portfolio",
+          "shortDescription": "Este sitio: portfolio bilingüe con panel de edición privado.",
+          "fullDescription": "Portfolio construido con Next.js, React y Tailwind CSS. Soporta español e inglés, consume una capa de datos intercambiable y tiene un panel oculto para editar el contenido sin tocar código.",
+          "technologies": [
+            {
+              "name": "Next.js",
+              "icon": "nextjs"
+            },
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "Tailwind CSS",
+              "icon": "tailwindcss"
+            }
+          ],
+          "screenshots": [
+            "/mock/portfolio.svg"
+          ],
+          "githubUrl": "https://github.com/nico-slk/",
+          "order": 4
+        }
+      ],
+      "experience": [
+        {
+          "id": "exp-agea",
+          "company": "AGEA - Grupo Clarín",
+          "role": "Full Stack Developer",
+          "year": "2026",
+          "period": "2026 - Actualidad · Híbrido",
+          "description": "Desarrollo y mantenimiento de la plataforma de pagos del grupo: gateway de pagos (GWP), panel de administración (GWP Admin) y servicio de tokenización de tarjetas (PCI).\nImplementación de firma HMAC-SHA256 en las notificaciones de cambio de estado de pago, con clave por aplicación cliente, compatibilidad hacia atrás y control de timeouts.\nDesarrollo de comandos de diagnóstico, reparación y exportación de datos en el servicio de tokenización (Java 17, Spring Boot), con tests automatizados.\nRemediación de vulnerabilidades (CVE) y actualización de dependencias críticas: Spring Framework, Bouncy Castle y Jackson.\nTests de integración (JUnit, H2) para la API de GWP Admin (Spring Boot, Java 21) y consultas SQL de verificación en el frontend Angular.\nDocumentación técnica integral del gateway: arquitectura, API, modelo de datos, integraciones con proveedores de pago, jobs y despliegue en Google Cloud.",
+          "technologies": [
+            {
+              "name": "Java",
+              "icon": "java"
+            },
+            {
+              "name": "Spring Boot",
+              "icon": "springboot"
+            },
+            {
+              "name": "Spring Security",
+              "icon": "springsecurity"
+            },
+            {
+              "name": "Angular",
+              "icon": "angular"
+            },
+            {
+              "name": "MySQL",
+              "icon": "mysql"
+            },
+            {
+              "name": "PostgreSQL",
+              "icon": "postgresql"
+            },
+            {
+              "name": "Docker",
+              "icon": "docker"
+            },
+            {
+              "name": "GitLab CI",
+              "icon": "gitlabci"
+            },
+            {
+              "name": "Google Cloud",
+              "icon": "googlecloud"
+            }
+          ],
+          "order": 1
+        },
+        {
+          "id": "exp-factorit",
+          "company": "FactorIT",
+          "role": "Full Stack Developer",
+          "year": "2024",
+          "period": "2024 - 2026 · Remoto",
+          "description": "Desarrollo de aplicaciones web escalables utilizando React, TypeScript, Java 8 y Spring Boot.\nDiseño e implementación de APIs REST para sistemas financieros (BBVA).\nOptimización de performance reduciendo tiempos de respuesta en 25%.\nImplementación de lógica de negocio y mejora de flujos de préstamos.\nTesting automatizado con Jest, Testing Library, JUnit y Mockito.\nTrabajo en equipos ágiles utilizando Scrum.",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "Java",
+              "icon": "java"
+            },
+            {
+              "name": "Spring Boot",
+              "icon": "springboot"
+            },
+            {
+              "name": "Jest",
+              "icon": "jest"
+            },
+            {
+              "name": "JUnit",
+              "icon": "junit"
+            },
+            {
+              "name": "Mockito",
+              "icon": "mockito"
+            }
+          ],
+          "order": 2
+        },
+        {
+          "id": "exp-kiura",
+          "company": "Kiura",
+          "role": "Backend Developer",
+          "year": "2024",
+          "period": "2024 · Remoto",
+          "description": "Desarrollo de APIs REST con Node.js, Express y MySQL.\nOptimización de queries SQL reduciendo latencia en 30%.\nImplementación de autenticación y control de acceso seguro (JWT).\nMejora de escalabilidad y estabilidad del sistema backend.",
+          "technologies": [
+            {
+              "name": "Node.js",
+              "icon": "nodejs"
+            },
+            {
+              "name": "Express",
+              "icon": "express"
+            },
+            {
+              "name": "MySQL",
+              "icon": "mysql"
+            },
+            {
+              "name": "JWT",
+              "icon": "jwt"
+            }
+          ],
+          "order": 3
+        },
+        {
+          "id": "exp-freelance",
+          "company": "Freelance",
+          "role": "Full Stack Developer",
+          "year": "2023",
+          "period": "2023 - 2024 · Remoto",
+          "description": "Desarrollo de aplicaciones web con React, Node.js y Express.\nDiseño e implementación de APIs RESTful.\nOptimización de performance frontend reduciendo tiempos de carga en 30%.\nMejora de experiencia de usuario (UX) y estabilidad en producción.\nControl de versiones con Git y gestión de repositorios.",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "Node.js",
+              "icon": "nodejs"
+            },
+            {
+              "name": "Express",
+              "icon": "express"
+            },
+            {
+              "name": "Git",
+              "icon": "git"
+            }
+          ],
+          "order": 4
+        },
+        {
+          "id": "exp-globallogic",
+          "company": "GlobalLogic",
+          "role": "Frontend Developer",
+          "year": "2021",
+          "period": "2021 - 2022 · Remoto",
+          "description": "Desarrollo de interfaces web con JavaScript para plataforma bancaria (Banco Credicoop).\nCreación de componentes reutilizables y mantenibles.\nReducción de errores en producción en 20% mediante optimización de código.\nTesting, debugging y mantenimiento de aplicaciones.\nTrabajo colaborativo en equipo bajo metodología Scrum.",
+          "technologies": [
+            {
+              "name": "JavaScript",
+              "icon": "javascript"
+            },
+            {
+              "name": "HTML",
+              "icon": "html"
+            },
+            {
+              "name": "CSS",
+              "icon": "css"
+            },
+            {
+              "name": "Scrum",
+              "icon": "scrum"
+            }
+          ],
+          "order": 5
+        }
+      ],
+      "education": [
+        {
+          "id": "edu-utn",
+          "title": "Diplomatura en Desarrollo Web Full Stack",
+          "institution": "Universidad Tecnológica Nacional de Buenos Aires - UTN.BA",
+          "kind": "degree",
+          "period": "2024",
+          "description": "Programa de 150 horas de Extensión Universitaria.",
+          "diplomaPath": "diplomas/utn-diplomatura-full-stack.pdf",
+          "order": 1
+        },
+        {
+          "id": "edu-rootstrap",
+          "title": "React Course",
+          "institution": "Rootstrap Learning Camp",
+          "kind": "course",
+          "period": "2023",
+          "description": "Curso online de React.",
+          "diplomaPath": "diplomas/rootstrap-react-course.pdf",
+          "order": 2
+        },
+        {
+          "id": "edu-henry",
+          "title": "Full Stack Web Developer",
+          "institution": "Henry Bootcamp",
+          "kind": "bootcamp",
+          "description": "JavaScript, HTML, CSS, Node, React, Redux y SQL.",
+          "diplomaPath": "diplomas/henry-full-stack-web-developer.pdf",
+          "order": 3
+        },
+        {
+          "id": "edu-digitalers",
+          "title": "Full Stack Developer Java + React",
+          "institution": "Telecom - Digitalers",
+          "kind": "course",
+          "period": "2021",
+          "description": "Desarrollo Full Stack con Java: 130 horas de cursada (Telecom Argentina y Educación IT).",
+          "diplomaPath": "diplomas/digitalers-full-stack-java.pdf",
+          "order": 4
+        },
+        {
+          "id": "edu-educacionit",
+          "title": "AWS Cloud Practitioner",
+          "institution": "EducaciónIT",
+          "kind": "certification",
+          "order": 5
+        }
+      ]
+    },
+    "en": {
+      "profile": {
+        "fullName": "Nicolas Selicki",
+        "role": "Semi-Senior Full Stack Developer",
+        "headline": "Backend development and scalable REST APIs, currently on the payments platform at AGEA (Clarín Group).",
+        "about": "Semi-Senior Full Stack Developer specialized in backend development and scalable REST API design. Strong experience with Node.js, Java (Spring Boot), and microservices-based architectures. Proven track record optimizing performance, reducing latency, and improving system stability in high-traffic environments. Frontend experience with React, Angular, and TypeScript. Agile (Scrum) team player with a focus on clean code, testing, and continuous improvement.",
+        "stack": [
+          "JavaScript",
+          "TypeScript",
+          "Java",
+          "React",
+          "Next.js",
+          "Angular",
+          "Node.js",
+          "Express",
+          "Spring Boot",
+          "MySQL",
+          "PostgreSQL",
+          "MongoDB",
+          "Docker",
+          "Google Cloud"
+        ],
+        "location": "Buenos Aires, Argentina",
+        "email": "nicolas.selicki@gmail.com",
+        "avatarUrl": "/mock/avatar.svg",
+        "cvUrl": "/cv/Nicolas_Selicki_CV_en.pdf"
+      },
+      "projects": [
+        {
+          "id": "proj-saver",
+          "technologies": [
+            {
+              "name": "Java",
+              "icon": "java"
+            },
+            {
+              "name": "Spring Boot",
+              "icon": "springboot"
+            },
+            {
+              "name": "Spring Security",
+              "icon": "springsecurity"
+            },
+            {
+              "name": "PostgreSQL",
+              "icon": "postgresql"
+            },
+            {
+              "name": "Flyway",
+              "icon": "flyway"
+            },
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "Vite",
+              "icon": "vite"
+            },
+            {
+              "name": "Tailwind CSS",
+              "icon": "tailwindcss"
+            },
+            {
+              "name": "Zustand",
+              "icon": "zustand"
+            },
+            {
+              "name": "Docker",
+              "icon": "docker"
+            }
+          ],
+          "screenshots": [
+            "/mock/saver.svg"
+          ],
+          "githubUrl": "https://github.com/nico-slk/saver-app",
+          "featured": true,
+          "name": "Saver",
+          "shortDescription": "Personal finance web app: income, expenses, savings and inflation-aware projections.",
+          "fullDescription": "Responsive web app to manage personal finances in one place.\n\n• Fixed and extra income; one-off, installment and monthly fixed expenses with estimated increases.\n• Accounts and net worth in pesos and dollars, payments with receipts and the exchange rate stored per transaction.\n• History and month-to-month comparison, and 6–60 month projections in today's money using official inflation data (INDEC / US CPI) downloaded automatically.\n• Email or Google sign-up, password recovery by email, Spanish/English and light/dark theme.\n\nBackend: REST API with Java 21, Spring Boot 3.5, Spring Security (OAuth2 resource server), PostgreSQL and Flyway, S3-compatible storage and OpenAPI docs. Frontend: SPA with React 19, TypeScript, Vite, Tailwind CSS, Zustand, TanStack Query and Recharts.",
+          "order": 1
+        },
+        {
+          "id": "proj-ai-medical",
+          "name": "AI Medical Assistant",
+          "shortDescription": "AI chatbot for medical appointment scheduling.",
+          "fullDescription": "Conversational assistant that uses AI APIs to help patients manage appointments, integrated with Google services.",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "Node.js",
+              "icon": "nodejs"
+            },
+            {
+              "name": "AI APIs",
+              "icon": "aiapis"
+            },
+            {
+              "name": "Google API",
+              "icon": "googleapi"
+            }
+          ],
+          "screenshots": [
+            "/mock/ai-assistant.svg"
+          ],
+          "githubUrl": "https://github.com/nico-slk/",
+          "featured": true,
+          "order": 2
+        },
+        {
+          "id": "proj-consultancy",
+          "name": "Consultancy Web Apps",
+          "shortDescription": "Web apps for consulting firms, with continuous deployment.",
+          "fullDescription": "Websites and web apps built with Next.js and TypeScript, with CI/CD pipelines and deployment on Vercel.",
+          "technologies": [
+            {
+              "name": "Next.js",
+              "icon": "nextjs"
+            },
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "CI/CD",
+              "icon": "cicd"
+            },
+            {
+              "name": "Vercel",
+              "icon": "vercel"
+            }
+          ],
+          "screenshots": [
+            "/mock/consultancy.svg"
+          ],
+          "githubUrl": "https://github.com/nico-slk/",
+          "featured": true,
+          "order": 3
+        },
+        {
+          "id": "proj-portfolio",
+          "name": "Personal Portfolio",
+          "shortDescription": "This site: a bilingual portfolio with a private editing panel.",
+          "fullDescription": "Portfolio built with Next.js, React and Tailwind CSS. It supports Spanish and English, consumes a swappable data layer and has a hidden panel to edit content without touching code.",
+          "technologies": [
+            {
+              "name": "Next.js",
+              "icon": "nextjs"
+            },
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "Tailwind CSS",
+              "icon": "tailwindcss"
+            }
+          ],
+          "screenshots": [
+            "/mock/portfolio.svg"
+          ],
+          "githubUrl": "https://github.com/nico-slk/",
+          "order": 4
+        }
+      ],
+      "experience": [
+        {
+          "id": "exp-agea",
+          "company": "AGEA - Clarín Group",
+          "role": "Full Stack Developer",
+          "year": "2026",
+          "period": "2026 - Present · Hybrid",
+          "description": "Developed and maintained the group's payments platform: payment gateway (GWP), admin panel (GWP Admin), and card tokenization service (PCI).\nImplemented HMAC-SHA256 signing for payment status notifications, with per-client-application keys, backward compatibility, and timeout handling.\nBuilt data diagnosis, repair, and export commands for the tokenization service (Java 17, Spring Boot), backed by automated tests.\nRemediated security vulnerabilities (CVEs) and upgraded critical dependencies: Spring Framework, Bouncy Castle, and Jackson.\nWrote integration tests (JUnit, H2) for the GWP Admin API (Spring Boot, Java 21) and SQL verification queries in the Angular frontend.\nAuthored comprehensive technical documentation for the gateway: architecture, API, data model, payment provider integrations, jobs, and Google Cloud deployment.",
+          "technologies": [
+            {
+              "name": "Java",
+              "icon": "java"
+            },
+            {
+              "name": "Spring Boot",
+              "icon": "springboot"
+            },
+            {
+              "name": "Spring Security",
+              "icon": "springsecurity"
+            },
+            {
+              "name": "Angular",
+              "icon": "angular"
+            },
+            {
+              "name": "MySQL",
+              "icon": "mysql"
+            },
+            {
+              "name": "PostgreSQL",
+              "icon": "postgresql"
+            },
+            {
+              "name": "Docker",
+              "icon": "docker"
+            },
+            {
+              "name": "GitLab CI",
+              "icon": "gitlabci"
+            },
+            {
+              "name": "Google Cloud",
+              "icon": "googlecloud"
+            }
+          ],
+          "order": 1
+        },
+        {
+          "id": "exp-factorit",
+          "company": "FactorIT",
+          "role": "Full Stack Developer",
+          "year": "2024",
+          "period": "2024 - 2026 · Remote",
+          "description": "Developed scalable web applications using React, TypeScript, Java 8, and Spring Boot.\nDesigned and implemented REST APIs for financial systems (BBVA).\nOptimized application performance, reducing response times by 25%.\nImproved loan processing workflows and business logic efficiency.\nImplemented automated testing using Jest, Testing Library, JUnit, and Mockito.\nCollaborated in Agile teams using Scrum methodology.",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "TypeScript",
+              "icon": "typescript"
+            },
+            {
+              "name": "Java",
+              "icon": "java"
+            },
+            {
+              "name": "Spring Boot",
+              "icon": "springboot"
+            },
+            {
+              "name": "Jest",
+              "icon": "jest"
+            },
+            {
+              "name": "JUnit",
+              "icon": "junit"
+            },
+            {
+              "name": "Mockito",
+              "icon": "mockito"
+            }
+          ],
+          "order": 2
+        },
+        {
+          "id": "exp-kiura",
+          "company": "Kiura",
+          "role": "Backend Developer",
+          "year": "2024",
+          "period": "2024 · Remote",
+          "description": "Developed RESTful APIs using Node.js, Express, and MySQL.\nOptimized SQL queries, reducing latency by 30%.\nImplemented secure authentication and authorization (JWT).\nImproved backend scalability and system stability.",
+          "technologies": [
+            {
+              "name": "Node.js",
+              "icon": "nodejs"
+            },
+            {
+              "name": "Express",
+              "icon": "express"
+            },
+            {
+              "name": "MySQL",
+              "icon": "mysql"
+            },
+            {
+              "name": "JWT",
+              "icon": "jwt"
+            }
+          ],
+          "order": 3
+        },
+        {
+          "id": "exp-freelance",
+          "company": "Freelance",
+          "role": "Full Stack Developer",
+          "year": "2023",
+          "period": "2023 - 2024 · Remote",
+          "description": "Built web applications using React, Node.js, and Express.\nDesigned and developed RESTful APIs.\nImproved frontend performance, reducing load times by 30%.\nEnhanced user experience (UX) and production stability.\nManaged version control with Git.",
+          "technologies": [
+            {
+              "name": "React",
+              "icon": "react"
+            },
+            {
+              "name": "Node.js",
+              "icon": "nodejs"
+            },
+            {
+              "name": "Express",
+              "icon": "express"
+            },
+            {
+              "name": "Git",
+              "icon": "git"
+            }
+          ],
+          "order": 4
+        },
+        {
+          "id": "exp-globallogic",
+          "company": "GlobalLogic",
+          "role": "Frontend Developer",
+          "year": "2021",
+          "period": "2021 - 2022 · Remote",
+          "description": "Developed web interfaces using JavaScript for a banking platform (Banco Credicoop).\nBuilt reusable and maintainable UI components.\nReduced production errors by 20% through code optimization.\nPerformed testing, debugging, and maintenance.\nWorked collaboratively in Agile (Scrum) teams.",
+          "technologies": [
+            {
+              "name": "JavaScript",
+              "icon": "javascript"
+            },
+            {
+              "name": "HTML",
+              "icon": "html"
+            },
+            {
+              "name": "CSS",
+              "icon": "css"
+            },
+            {
+              "name": "Scrum",
+              "icon": "scrum"
+            }
+          ],
+          "order": 5
+        }
+      ],
+      "education": [
+        {
+          "id": "edu-utn",
+          "title": "Full Stack Web Development Diploma",
+          "institution": "UTN Buenos Aires",
+          "kind": "degree",
+          "period": "2024",
+          "description": "150-hour university extension program.",
+          "diplomaPath": "diplomas/utn-diplomatura-full-stack.pdf",
+          "order": 1
+        },
+        {
+          "id": "edu-rootstrap",
+          "title": "React Course",
+          "institution": "Rootstrap Learning Camp",
+          "kind": "course",
+          "period": "2023",
+          "description": "Online React course.",
+          "diplomaPath": "diplomas/rootstrap-react-course.pdf",
+          "order": 2
+        },
+        {
+          "id": "edu-henry",
+          "title": "Full Stack Web Developer",
+          "institution": "Henry Bootcamp",
+          "kind": "bootcamp",
+          "description": "JavaScript, HTML, CSS, Node, React, Redux and SQL.",
+          "diplomaPath": "diplomas/henry-full-stack-web-developer.pdf",
+          "order": 3
+        },
+        {
+          "id": "edu-digitalers",
+          "title": "Full Stack Developer (Java + React)",
+          "institution": "Telecom - Digitalers",
+          "kind": "course",
+          "period": "2021",
+          "description": "Full Stack Development with Java: 130 hours (Telecom Argentina and Educación IT).",
+          "diplomaPath": "diplomas/digitalers-full-stack-java.pdf",
+          "order": 4
+        },
+        {
+          "id": "edu-educacionit",
+          "title": "AWS Cloud Practitioner",
+          "institution": "EducaciónIT",
+          "kind": "certification",
+          "order": 5
+        }
+      ]
+    }
+  }
+}

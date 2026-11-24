@@ -6,7 +6,7 @@ import { useLanguage } from "@/components/LanguageProvider";
 import { useMemo } from "react";
 
 
-const Header = ({ visible }: { visible: boolean }) => {
+const Header = ({ visible, name }: { visible: boolean; name?: string }) => {
   const { dictionary, locale, toggleLocale } = useLanguage();
   const ids = useMemo(() => [...sectionIds], []);
   const activeSection = useActiveSection(ids);
@@ -74,7 +74,7 @@ const Header = ({ visible }: { visible: boolean }) => {
             bg-[rgb(var(--color-secondary))]
             font-(--secondary-font)
           ">DI</span> */}
-          <span className="font-extrabold ">{dictionary.hero.name}</span>
+          <span className="font-extrabold ">{name ?? dictionary.hero.name}</span>
         </button>
         <nav className="flex  items-center gap-4 flex-nowrap overflow-x-auto pb-[0.2rem] md:flex-wrap" aria-label="Primary navigation">
           {items.map((item) => (

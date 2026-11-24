@@ -1,0 +1,67 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Reemplazá este UID por el UID real de tu usuario admin en
+    // Firebase Console -> Authentication -> Users.
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.uid == "REEMPLAZAR_CON_TU_ADMIN_UID";
+    }
+
+    function isValidAttachment() {
+      return !('attachmentPath' in request.resource.data)
+        || (
+          request.resource.data.attachmentPath is string
+          && request.resource.data.attachmentPath.size() > 0
+          && request.resource.data.attachmentPath.size() <= 300
+          && request.resource.data.attachmentName is string
+          && request.resource.data.attachmentName.size() <= 200
+          && request.resource.data.attachmentType is string
+          && request.resource.data.attachmentSize is int
+          && request.resource.data.attachmentSize > 0
+          && request.resource.data.attachmentSize <= 5 * 1024 * 1024
+        );
+    }
+
+    // Contenido editable del portfolio (público de solo lectura, escritura solo admin).
+    match /portfolio/{docId} {
+      allow read: if docId == "content";
+      allow write: if docId == "content" && isAdmin();
+    }
+
+    // Mensajes del formulario de contacto (creación pública validada, lectura/borrado solo admin).
+    match /contactMessages/{messageId} {
+      allow create: if request.resource.data.keys().hasAll(['fullName', 'email', 'message', 'createdAtIso'])
+        && request.resource.data.keys().hasOnly([
+          'fullName',
+          'email',
+          'message',
+          'createdAt',
+          'createdAtIso',
+          'attachmentPath',
+          'attachmentName',
+          'attachmentType',
+          'attachmentSize'
+        ])
+        && request.resource.data.fullName is string
+        && request.resource.data.fullName.size() >= 2
+        && request.resource.data.fullName.size() <= 120
+        && request.resource.data.email is string
+        && request.resource.data.email.size() <= 200
+        && request.resource.data.email.matches('^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$')
+        && request.resource.data.message is string
+        && request.resource.data.message.size() >= 10
+        && request.resource.data.message.size() <= 5000
+        && request.resource.data.createdAtIso is string
+        && request.resource.data.createdAtIso.size() <= 40
+        && isValidAttachment();
+
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

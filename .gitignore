@@ -9,6 +9,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+/Claude outputs
 
 # testing
 /coverage
@@ -32,9 +33,21 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
+
+# firebase
+/.firebase/
+
+# assets y datos migrados a Firebase Storage / Firestore
+# (se conserva data/mock/content.mock.json porque se importa como respaldo en el build)
+/public/cv/
+/public/mock/
+/storage/
+/data/content.json
+/data/mock/contact-messages.mock.json
 
 # typescript
 *.tsbuildinfo

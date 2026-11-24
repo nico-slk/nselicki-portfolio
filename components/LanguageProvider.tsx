@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useSyncExternalStore, type ReactNode } from "react";
 import type { Locale } from "@/interfaces/content";
 import { dictionaries, isLocale, type Dictionary } from "@/locales";
 
@@ -10,30 +10,48 @@ interface LanguageContextValue {
     toggleLocale: () => void;
 }
 
+const STORAGE_KEY = "portfolio-locale";
+const LOCALE_EVENT = "portfolio-locale-change";
 const LanguageContext = createContext<LanguageContextValue | null>(null);
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-    const [locale, setLocale] = useState<Locale>("es");
+function subscribeLocale(onStoreChange: () => void) {
+    window.addEventListener("storage", onStoreChange);
+    window.addEventListener(LOCALE_EVENT, onStoreChange);
+    return () => {
+        window.removeEventListener("storage", onStoreChange);
+        window.removeEventListener(LOCALE_EVENT, onStoreChange);
+    };
+}
 
-    useEffect(() => {
-        const storedLocale = window.localStorage.getItem("portfolio-locale");
-        if (isLocale(storedLocale)) {
-            setLocale(storedLocale);
-        }
-    }, []);
+function getLocaleSnapshot(): Locale {
+    const stored = window.localStorage.getItem(STORAGE_KEY);
+    return isLocale(stored) ? stored : "es";
+}
+
+function getServerLocaleSnapshot(): Locale {
+    return "es";
+}
+
+export function LanguageProvider({ children }: { children: ReactNode }) {
+    const locale = useSyncExternalStore(subscribeLocale, getLocaleSnapshot, getServerLocaleSnapshot);
 
     useEffect(() => {
         document.documentElement.lang = locale;
-        window.localStorage.setItem("portfolio-locale", locale);
     }, [locale]);
+
+    const toggleLocale = useCallback(() => {
+        const next: Locale = getLocaleSnapshot() === "es" ? "en" : "es";
+        window.localStorage.setItem(STORAGE_KEY, next);
+        window.dispatchEvent(new Event(LOCALE_EVENT));
+    }, []);
 
     const value = useMemo<LanguageContextValue>(
         () => ({
             locale,
             dictionary: dictionaries[locale],
-            toggleLocale: () => setLocale((current: Locale) => (current === "es" ? "en" : "es"))
+            toggleLocale
         }),
-        [locale]
+        [locale, toggleLocale]
     );
 
     return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;

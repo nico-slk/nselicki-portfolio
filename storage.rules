@@ -1,0 +1,47 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Reemplazá este UID por el UID real de tu usuario admin en
+    // Firebase Console -> Authentication -> Users.
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.uid == "REEMPLAZAR_CON_TU_ADMIN_UID";
+    }
+
+    // Assets públicos del portfolio: diplomas, CV e imágenes (avatar / capturas).
+    match /diplomas/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /cv/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    match /media/{allPaths=**} {
+      allow read: if true;
+      allow write: if isAdmin();
+    }
+
+    // Adjuntos enviados desde el formulario de contacto: solo creación (máx. 5 MB),
+    // lectura y eliminación exclusivas del administrador.
+    match /contact-attachments/{messageId}/{fileName} {
+      allow create: if request.resource != null
+        && request.resource.size > 0
+        && request.resource.size <= 5 * 1024 * 1024
+        && (
+          request.resource.contentType == 'application/pdf'
+          || request.resource.contentType == 'image/jpeg'
+          || request.resource.contentType == 'application/msword'
+          || request.resource.contentType == 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
+        );
+      allow read, update, delete: if isAdmin();
+    }
+
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}
